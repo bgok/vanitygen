@@ -156,10 +156,6 @@ main(int argc, char **argv)
 			return 1;
 		}
 
-		if (res == 2) {
-			compressed = 1;
-		}
-
 		bntmp = BN_new();
 		bntmp2 = BN_new();
 		bnctx = BN_CTX_new();

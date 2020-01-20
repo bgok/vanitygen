@@ -342,8 +342,6 @@ vg_decode_privkey(const char *b58encoded, EC_KEY *pkey, int *addrtype)
 	if (res != 33)
 		return 0;
 
-	ret = res - 32;
-
 	bnpriv = BN_new();
 	BN_bin2bn(ecpriv + 1, 32, bnpriv);
 	res = vg_set_privkey(bnpriv, pkey);
